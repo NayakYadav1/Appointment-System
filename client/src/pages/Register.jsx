@@ -5,9 +5,7 @@ import { Link } from 'react-router-dom'
 // import Form from 'antd/es/form/Form'
 
 const Register = () => {
-
-    
-
+  
   // Form Handler
   const onfinishHandler = (values) => {
     console.log(values);
