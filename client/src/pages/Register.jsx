@@ -3,19 +3,15 @@
   import { Link, useNavigate } from 'react-router-dom'
   import axios from 'axios';
   import Form from 'antd/es/form/Form';
-  import { Button, Input, message } from 'antd';
+  import { Input, message } from 'antd';
 
   const Register = () => {
     const navigate = useNavigate()
     
     // Form Handler
     const onFinishHandler = async(values) => {
-      console.log(values);
-      
       try{
         const res = await axios.post('/api/v1/user/register', values);
-        console.log(res.data);
-        
         if(res.data.success) {
           message.success("Registered Successfully");
           navigate('/login');
@@ -43,13 +39,13 @@
               <Input type='password' required />
             </Form.Item>
             <Link to='/login' className='m-2'>Already user login here</Link>
-            <Button className='btn btn-primary' type='submit'>
+            <button className='btn btn-primary' type='submit'>
               Register
-            </Button>
+            </button>
           </Form>
         </div>
       </>
     )
   }
 
-  export default Register
+  export default Register;
