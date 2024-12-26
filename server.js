@@ -18,11 +18,7 @@ app.use(express.json())
 app.use(morgan('dev'))
 
 // routes
-app.get('/', (req, res) => {
-    res.status(200).send({
-        message: "server running"
-    })
-})
+app.use('/api/v1/user', require('./routes/userRoutes'))
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
