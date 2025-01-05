@@ -10,6 +10,7 @@ export default function ProtectedRoute({children}) {
   const {user} = useSelector(state => state.user)
   
   // get user
+  // eslint-disable-next-line
   const getUser = async() => {
     try{
       dispatch(showLoading())
