@@ -6,7 +6,7 @@ const ApplyDoctor = () => {
   // handle form
   const handleFinish = (values) => {
     console.log(values);
-  }
+  };
   return (
     <Layout>
       <h1 className="text-center">Apply Doctor</h1>
@@ -103,16 +103,17 @@ const ApplyDoctor = () => {
             </Form.Item>
           </Col>
           <Col xs={24} lg={8}>
-            <Form.Item label="Timings" name="timings" >
-              <TimePicker.RangePicker />
+            <Form.Item label="Timings" name="timings">
+              <TimePicker.RangePicker format="HH:mm" />
             </Form.Item>
           </Col>
+          <Col xs={24} lg={8}></Col>
+          <Col xs={24} lg={8}>
+            <button className="btn btn-primary form-btn" type="submit">
+              Submit
+            </button>
+          </Col>
         </Row>
-        <div className="d-flex justify-content-end mb-3">
-          <button className="btn btn-primary" type="submit">
-            Submit
-          </button>
-        </div>
       </Form>
     </Layout>
   );
