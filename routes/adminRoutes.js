@@ -1,5 +1,6 @@
 const express = require('express')
 const { getAllUsersController, getAllDoctorsController } = require('../controllers/adminCtrl')
+const authMiddleware = require('../middlewares/authMiddleware')
 
 const router = express.Router()
 
@@ -7,6 +8,6 @@ const router = express.Router()
 router.get('/getAllUsers', authMiddleware, getAllUsersController)
 
 // Get Method || Users
-router.get('/getAllDoctorss', authMiddleware, getAllDoctorsController)
+router.get('/getAllDoctors', authMiddleware, getAllDoctorsController)
 
 module.exports = router

@@ -3,7 +3,7 @@ const userModel = require('../models/userModel')
 
 const getAllUsersController = async(req, res) => {
     try{
-        const res = await userModel.find({})
+        const users = await userModel.find({})
         res.status(200).send({
             success : true,
             message: 'Users Data List',
