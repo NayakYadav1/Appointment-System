@@ -14,7 +14,7 @@ import Doctors from "./pages/admin/Doctors";
 import Profile from './pages/doctor/Profile';
 
 function App() {
-  const { loading } = useSelector((state) => state.alerts);
+  const { loading } = useSelector(state => state.alerts);
   return (
     <ConfigProvider wave={{ disabled: true }}>
       <>
