@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../../components/Layout";
+import axios from "axios";
 import { useParams } from "react-router-dom";
 import { Col, Form, Input, message, Row, TimePicker } from "antd";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { showLoading, hideLoading } from "../../redux/features/alertSlice";
-import axios from "axios";
 
 const Profile = () => {
   const { user } = useSelector((state) => state.user);
@@ -67,7 +67,7 @@ const Profile = () => {
   useEffect(() => {
     getDoctorInfo();
   }, []);
-  
+
   return (
     <Layout>
       <h1>Manage Profile</h1>
@@ -169,15 +169,15 @@ const Profile = () => {
                 <Input type="text" placeholder="Your Fee Per Consaltation" />
               </Form.Item>
             </Col>
-            <Col xs={24} lg={8}>
+            {/* <Col xs={24} lg={8}>
               <Form.Item label="Timings" name="timings">
                 <TimePicker.RangePicker format="HH:mm" />
               </Form.Item>
-            </Col>
+            </Col> */}
             <Col xs={24} lg={8}></Col>
             <Col xs={24} lg={8}>
               <button className="btn btn-primary form-btn" type="submit">
-                Submit
+                Update
               </button>
             </Col>
           </Row>

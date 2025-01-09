@@ -8,6 +8,6 @@ const router = express.Router()
 router.post('/getDoctorInfo', authMiddleware, getDoctorInfoController)
 
 // Post Update profile
-router.post('updateProfile', authMiddleware, updateProfileController)
+router.post('/updateProfile', authMiddleware, updateProfileController)
 
 module.exports = router
